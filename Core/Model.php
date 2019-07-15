@@ -12,8 +12,7 @@ class Model{
          $stm->execute();
          $data = $stm->fetchAll(PDO::FETCH_OBJ);
       
-        // print_r($data);
-         //print_r($data[0]->imie);
+      
          if ($data) {
              return $data;
          }
@@ -28,9 +27,7 @@ class Model{
          $stm = $instance->prepare($q);
          $stm->execute();
          $data = $stm->fetchAll(PDO::FETCH_OBJ);
-      
-        // print_r($data);
-         //print_r($data[0]->imie);
+     
          if ($data) {
              return $data;
          }

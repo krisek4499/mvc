@@ -9,8 +9,7 @@ class View{
        }
        public function Render($where,$tab){
 
-          // echo $this -> controller;
-          // echo $this -> page;
+  
          $User=$tab;
          $Where=$where;
       

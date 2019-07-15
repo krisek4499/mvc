@@ -26,7 +26,7 @@
 <?php
 require_once 'controllers/Index.php';
 
-//if ($this -> User) {
+
   if($User) {?>
                 <br><i>Usunąłeś swoje dane: <?= $User ?></i></br>
                 
