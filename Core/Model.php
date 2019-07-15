@@ -12,7 +12,7 @@ class Model{
          $stm->execute();
          $data = $stm->fetchAll(PDO::FETCH_OBJ);
       
-      
+       
          if ($data) {
              return $data;
          }
@@ -27,7 +27,8 @@ class Model{
          $stm = $instance->prepare($q);
          $stm->execute();
          $data = $stm->fetchAll(PDO::FETCH_OBJ);
-     
+      
+      
          if ($data) {
              return $data;
          }

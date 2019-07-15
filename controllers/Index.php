@@ -9,7 +9,7 @@ class Index extends Controller{
      require_once 'models/Index_model.php';
      $this -> model = new Index_model();
 
-      //print_r($params);
+
   
      $action=$params;
      if(isset($params[1])) $action = ucfirst($params[1]);
@@ -58,7 +58,7 @@ class Index extends Controller{
         $tab[5]=$email;
         $zm= new Index_model();
         $foo=$zm -> Valid($tab);
-        //echo $foo;
+      
         if($foo=="Poprawnie wypełniony formularz"){
           $instance=connect_DB::getInstance();
           $query="INSERT INTO testowa values ('','$imie','$nazwisko','$zawod','$nr_telefonu','$data_ur','$email')";
@@ -90,7 +90,7 @@ class Index extends Controller{
         $row = $data->fetch();
         $user=$row['imie'];
 
-        //$instance=connect_DB::getInstance();
+      
         $query="DELETE FROM testowa  WHERE id= '$value'";
           $stm = $instance->prepare($query);
           $stm->execute();
