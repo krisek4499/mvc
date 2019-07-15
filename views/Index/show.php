@@ -27,7 +27,7 @@
 <?php
 require_once 'controllers/Index.php';
 
-//if ($this -> User) {
+
   if($User) {?>
                 <br><i>Imie: <?= $User[0] -> imie ?></i></br>
                 <br><i>Nazwisko: <?= $User[0] -> nazwisko ?></i></br>
