@@ -41,7 +41,10 @@ require_once 'controllers/Index.php';
   
 <input type="submit" class="btn btn-success" value="powrót do formularza" />
     </form>
+    <form action="/mvc/Index/show_all" method="post">
 
+<input type="submit" class="btn btn-success" value="pokaz wszystkich" />
+    </form>
 <?php } else{?>
 
 

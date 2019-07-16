@@ -52,7 +52,10 @@ require_once 'controllers/Index.php';
                 <br><i>Data urodzenia: <1?= $this -> User[0] -> data_ur ?></i></br>
                 <br><i>Email: <1?= $this -> User[0] -> email ?></i></br>-->
 
+                <form action="/mvc/Index/show_all" method="post">
 
+<input type="submit" class="btn btn-success" value="pokaz wszystkich" />
+    </form>
 <?php } else{
   ?>
  

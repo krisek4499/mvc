@@ -60,7 +60,10 @@
     </form>   
 
   
+    <form action="/mvc/Index/show_all" method="post">
 
+<input type="submit" class="btn btn-success" value="pokaz wszystkich" />
+    </form>
 <body>
 
 

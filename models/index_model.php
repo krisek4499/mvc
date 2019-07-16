@@ -12,7 +12,11 @@ class Index_model extends Model {
       $valid=true;
       $error="brak";
 
+     
      $imie = $User[0];
+      
+  
+
      if ($imie==null)  $valid=false;
 
      $nazwisko = $User[1];

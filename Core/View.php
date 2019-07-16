@@ -42,6 +42,11 @@ class View{
             require_once 'views/Index/update.php';
             $this -> page=$Where;
            }
+           else if($Where==="show_all"){
+         
+            require_once 'views/Index/show_all.php';
+            $this -> page=$Where;
+           }
            else {
                 require_once 'views/Error.php';
                 }

@@ -28,14 +28,34 @@
 require_once 'controllers/Index.php';
 
 
-  if($User) {?>
-                <br><i>Imie: <?= $User[0] -> imie ?></i></br>
-                <br><i>Nazwisko: <?= $User[0] -> nazwisko ?></i></br>
-                <br><i>Zawód: <?= $User[0] -> zawod ?></i></br>
-                <br><i>Numer telefonu: <?=  $User[0] -> nr_telefonu ?></i></br>
-                <br><i>Data urodzenia: <?= $User[0] -> data_ur ?></i></br>
-                <br><i>Email: <?= $User[0] -> email ?></i></br>
 
+$i=0;
+
+While(isset($User[$i]))
+  {
+ ?>
+  
+
+<table bordercolor="blue"><tr>
+<tr><td>Id: <?= $User[$i] -> id?></td></tr></tr>
+<tr><td>Imie: <?= $User[$i] -> imie ?></td></tr></tr>
+<tr><td>Nazwisko: <?= $User[$i] -> nazwisko ?></td></tr>
+<tr><td>Zawód: <?= $User[$i] -> zawod ?></td></tr>
+<tr><td>Numer telefonu: <?=  $User[$i] -> nr_telefonu ?></td></tr>
+<tr><td>Data urodzenia: <?= $User[$i] -> data_ur ?></td></tr>
+<tr><td>Email: <?= $User[$i] -> email ?></td></tr>
+
+<tr><td>------------------------------------</td></tr>
+</tr>
+</table>
+<form action="edit" method="post">
+	       <input type="hidden" name="id" value=<?php echo $User[$i] -> id ; ?> />
+
+	   <input type="submit" class="btn btn-success" name="edytuj" value= "Edytuj"/>
+        </form>
+<?php
+
+$i++;}?>
                <!-- <br><i>Imie: <1?= $this -> User[0] -> imie ?></i></br>
                 <br><i>Nazwisko: <1?= $this -> User[0] -> nazwisko ?></i></br>
                 <br><i>Zawód: <1?= $this -> User[0] -> zawod ?></i></br>
@@ -43,19 +63,10 @@ require_once 'controllers/Index.php';
                 <br><i>Data urodzenia: <1?= $this -> User[0] -> data_ur ?></i></br>
                 <br><i>Email: <1?= $this -> User[0] -> email ?></i></br>-->
 
-                
-<?php } else{?>
+                <form action="/mvc/Index/news" method="post">
 
-
-
-
-
-<div class="row">
-    <div class="col-md-12 text-center">
-        <h3>Brak uzytkownika.</h3>
-    </div>
-</div>
-<?php }?>
+<input type="submit" class="btn btn-success" value="powrót do formularza" />
+    </form>
 </div>
  </div>
     </div>
