@@ -30,29 +30,43 @@ require_once 'controllers/Index.php';
 
 
 $i=0;
-
+?><table class="table table-sm table-dark" bordercolor="green" style="width: 100%; height: 5em" >
+<tr><td style="width: 5%;">Id: </td>
+<td style="width:12%;" >Imie: </td>
+<td style="width:12%;" >Nazwisko: </td>
+<td style="width:15%;"  >Zawód:</td>
+<td style="width:15%;" >Numer telefonu: </td>
+<td style="width:15%;" >Data urodzenia: </td>
+<td style="width:15%;" >Email:</td>
+<td style="width:11%;" >Edycja:</td>
+</tr><?php
 While(isset($User[$i]))
   {
  ?>
   
 
-<table bordercolor="blue"><tr>
-<tr><td>Id: <?= $User[$i] -> id?></td></tr></tr>
-<tr><td>Imie: <?= $User[$i] -> imie ?></td></tr></tr>
-<tr><td>Nazwisko: <?= $User[$i] -> nazwisko ?></td></tr>
-<tr><td>Zawód: <?= $User[$i] -> zawod ?></td></tr>
-<tr><td>Numer telefonu: <?=  $User[$i] -> nr_telefonu ?></td></tr>
-<tr><td>Data urodzenia: <?= $User[$i] -> data_ur ?></td></tr>
-<tr><td>Email: <?= $User[$i] -> email ?></td></tr>
-
-<tr><td>------------------------------------</td></tr>
-</tr>
-</table>
-<form action="edit" method="post">
+<table class="table table-hover" bordercolor="green"  style="width: 100%; height: 5em">
+<tr>
+<td style="width:5%;" ><?= $User[$i] -> id?></td>
+<td style="width:12%;"  > <?= $User[$i] -> imie ?></td>
+<td style="width:12%;"  > <?= $User[$i] -> nazwisko ?></td>
+<td style="width:15%;"  > <?= $User[$i] -> zawod ?></td>
+<td style="width:15%;" > <?= $User[$i] -> nr_telefonu ?></td>
+<td style="width:15%;"  > <?= $User[$i] -> data_ur ?></td>
+<td style="width:15%;" > <?= $User[$i] -> email ?></td>
+<td style="width:11%;" ><form action="edit" method="post">
 	       <input type="hidden" name="id" value=<?php echo $User[$i] -> id ; ?> />
 
 	   <input type="submit" class="btn btn-success" name="edytuj" value= "Edytuj"/>
-        </form>
+        </form></td></tr>
+
+
+</table>
+<!--<form action="edit" method="post">
+	       <input type="hidden" name="id" value=<1?php echo $User[$i] -> id ; ?> />
+
+	   <input type="submit" class="btn btn-success" name="edytuj" value= "Edytuj"/>
+        </form>-->
 <?php
 
 $i++;}?>
