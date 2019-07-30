@@ -76,7 +76,7 @@
    <title>Formularz ajax</title>
    <meta charset="utf-8">
    <link href="../css/bootstrap.min.css" rel="stylesheet">
-   <link href="../css/aps.css" rel="stylesheet">
+   <link href="../css/appppps.css" rel="stylesheet">
    <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
    <script src="../js/validations.js" type="text/javascript"></script>
  </head>
@@ -95,7 +95,7 @@
       </div>
     <div class="container">
         <div class="jumbotron">
-         <h1 class="headerSection">Skontaktuj się z nami</h1>
+         <h1 class="headerSection">Edytuj swoje dane</h1>
         </div>
       
      <form action="/mvc3/Index/store" method="post">
