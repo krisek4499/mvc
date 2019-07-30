@@ -9,8 +9,6 @@ class View{
        }
        public function Render($where,$tab){
 
-          // echo $this -> controller;
-          // echo $this -> page;
          $User=$tab;
          $Where=$where;
       
@@ -44,19 +42,29 @@ class View{
             require_once 'views/Index/update.php';
             $this -> page=$Where;
            }
-else {
-          require_once 'views/Error.php';
-}
-
-          $plik="";
-          if (isset($this -> controller)&&isset($this -> page))
-          $plik = 'views/' . $this ->  controller . '/' . $this -> page. '.php';
-           if(file_exists($plik)){
-            require_once $plik;
-              }
-               else{
-                   $this -> message = "Nie znaleziono pliku!";
+           else if($Where==="show_all"){
+         
+            require_once 'views/Index/show_all.php';
+            $this -> page=$Where;
+           }
+           else if($Where==="email"){
+         
+            require_once 'views/Index/email.php';
+            $this -> page=$Where;
+           }
+           else {
                 require_once 'views/Error.php';
-                   }
+                }
+
+                 $plik="";
+                 if (isset($this -> controller)&&isset($this -> page))
+                 $plik = 'views/' . $this ->  controller . '/' . $this -> page. '.php';
+                   if(file_exists($plik)){
+                    require_once $plik;
+                    }
+                    else{
+                        $this -> message = "Nie znaleziono pliku!";
+                        require_once 'views/Error.php';
+                        }
        }
 }
